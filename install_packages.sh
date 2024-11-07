@@ -1,15 +1,12 @@
 #!/bin/bash
+# Script to install essential packages and checks if it is run with root privileges,
+# verifies if each package is already installed, and installs it if necessary.
 
-# Script to install essential packages on an Arch Linux system.
-# This script checks if it is run with root privileges, verifies if each package
-# is already installed, and installs it if necessary.
-
-# Define the file that contains the user-defined list of packages
+# Defines the file that contains the user-defined list of packages
 PACKAGES="packages.txt"
 
 # Check if the script is being run as root.
 # $EUID is the effective user ID of the current user.
-# If the user is not root, the script displays a message and exits.
 # Reference: https://stackoverflow.com/questions/18215973/how-to-check-if-running-as-root-in-a-bash-script
 if [[ $EUID -ne 0 ]]; then
     echo "This script needs to be run as root (use sudo)."
