@@ -9,13 +9,13 @@ PACKAGES="packages.txt"
 # $EUID is the effective user ID of the current user.
 # Reference: https://stackoverflow.com/questions/18215973/how-to-check-if-running-as-root-in-a-bash-script
 if [[ $EUID -ne 0 ]]; then
-    echo "This script needs to be run as root (use sudo)."
+    echo "This script needs to be run as root (try using sudo)"
     exit 1  # Exit status of 1 to indicate an error
 fi
 
 # Check if the package file exists
 if [[ ! -f "$PACKAGES" ]]; then
-    echo "Package file '$PACKAGES' not found. Please create a file with a list of package names."
+    echo "Package file '$PACKAGES' not found"
     exit 1  # Exit with an error code if the file does not exist
 fi
 
@@ -27,13 +27,13 @@ for package in $(cat "$PACKAGES"); do
         
         # Install the package using pacman
         if pacman -S "$package"; then
-            echo "$package installed successfully."
+            echo "$package installed successfully"
         else
-            echo "Failed to install $package. Please check for any issues and try again."
+            echo "Failed to install $package. Please try again"
             exit 1  # Exit status of 1 to indicate an error
         fi
     else
-        echo "$package is already installed."
+        echo "$package is already installed"
     fi
 done
 
