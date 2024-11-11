@@ -7,12 +7,6 @@ This project consists of two main Bash scripting projects designed to automate s
 - **OS**: Arch Linux
 - **Editor**: Neovim
 - **Shell**: Bash
-Ensure you have the required permissions to execute these scripts.
-### Cloning the Repository
-To start, clone the repository:
-```bash
-git clone https://github.com/juliehhoang/acit2420-assignment2.git
-```
 ---
 ## Project 1: Configuration Scripts
 The system setup scripts will automate the process of installing software and configuring directories for ease of use.
@@ -35,7 +29,7 @@ This script automates the installation of essential software packages on an Arch
 **Run the Script**: Open a terminal, navigate to the directory containing `install_packages.sh`, and run the script with `sudo`:
 
 ```bash
-`sudo ./install_packages.sh`
+sudo ./install_packages.sh
 ```
 #### Notes
 - **Package Manager**: This script is designed specifically for **Arch Linux** and uses `pacman` as the package manager.
