@@ -1,4 +1,4 @@
-# acit2420-assignment2
+# ACIT 2420 Assignment 2
 This project consists of two main Bash scripting projects designed to automate system setup and user management tasks. These scripts simplify the process of installing essential packages, setting up symbolic links for configuration files, and creating new users with predefined settings.
 ## Overview
 1. **Project 1: Configuration scripts**: Automate the installation of packages and create symbolic links to configuration files stored in a remote Git repository.
@@ -12,7 +12,7 @@ This project consists of two main Bash scripting projects designed to automate s
 The system setup scripts will automate the process of installing software and configuring directories for ease of use.
 #### Script Components
 1. **Package Installation**: Installs required packages.
-2. **Symbolic Links Creation: Creates symbolic links from configuration files to the appropriate locations.
+2. **Symbolic Links Creation**: Creates symbolic links from configuration files to the appropriate locations.
 3. **Master Script**: Used to call package installation and symbolic links creation as required.
 ---
 ### `install_packages.sh` - Package Installation Script
