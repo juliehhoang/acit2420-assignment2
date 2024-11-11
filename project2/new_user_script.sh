@@ -22,8 +22,7 @@ USER_SHELL="/bin/bash"   # Default shell for the new user
 USER_GROUPS=""           # Default, no additional groups
 HOME_DIR=""              # Default, no home directory specified
 
-# Parse command-line options with getopts
-# -u for username, -s for shell, -g for additional groups, -h for home directory
+# Check which options were provided by the user using getopts
 while getopts ":u:s:g:h:" opt; do
   case ${opt} in
     u)

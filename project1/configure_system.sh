@@ -26,7 +26,8 @@ done
 # Check if at least one valid option (-i or -l) is provided
 if ! $install_packages && ! $create_links; then
   echo "You must specify at least one option (-i or -l)"
-  echo "Use: $0 [-i] to install the packages, [-l] to create symbolic links for configuration files"
+  echo "Use: $0 [-i] to install the packages"
+  echo "Use: $0 [-l] to create symbolic links for configuration files"
   exit 1
 fi
 
